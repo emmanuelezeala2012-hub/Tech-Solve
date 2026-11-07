@@ -1,9 +1,6 @@
 const SUPABASE_URL = krlsmwwjnpwgcnqrxswd;
 const SUPABASE_KEY = sb_publishable_KusPUImo8C7e-tZ7IWySjA_JqXiJM5F;
 
-const SUPABASE_URL = "PASTE_YOUR_PROJECT_URL_HERE";
-const SUPABASE_KEY = "PASTE_YOUR_SB_PUBLISHABLE_KEY_HERE";
-
 const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const $ = s => document.querySelector(s);
