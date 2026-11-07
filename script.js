@@ -37,7 +37,7 @@ render();
 <div class="modal" id="modal">
   <div class="modalBox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div>
 </div>
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</scrip<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>t>
+<script src="script.js">
 </body>
 </html>
