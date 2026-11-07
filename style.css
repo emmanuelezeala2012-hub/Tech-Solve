@@ -1,1 +1,72 @@
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#f5f7fb;color:#172033}.app{min-height:100vh;display:flex}.sidebar{width:250px;background:#fff;border-right:1px solid #e8ebf2;padding:24px 16px;display:flex;flex-direction:column}.brand{display:flex;gap:11px;align-items:center;margin:0 10px 32px}.brand b{display:block;font-size:18px}.brand small{color:#8b94a7;font-size:11px}.logo{width:38px;height:38px;border-radius:12px;background:#2563eb;color:#fff;display:grid;place-items:center;font-weight:800}.nav{border:0;background:transparent;width:100%;padding:13px 14px;border-radius:10px;text-align:left;font-size:14px;color:#667085;margin:3px 0;cursor:pointer}.nav.active,.nav:hover{background:#eef4ff;color:#2563eb;font-weight:700}.nav span{margin-left:9px}.side-note{margin-top:auto;background:#f5f7fb;border-radius:12px;padding:12px;color:#8b94a7;font-size:11px}.main{flex:1;min-width:0}.topbar{height:86px;background:#fff;border-bottom:1px solid #e8ebf2;padding:18px 30px;display:flex;align-items:center;justify-content:space-between}.welcome span{font-size:12px;color:#8b94a7}.welcome h1{margin:2px 0;font-size:22px}.profileBtn{border:0;background:transparent;display:flex;gap:9px;align-items:center;font-weight:700;cursor:pointer}.profileBtn span:first-child{background:#dbeafe;color:#2563eb;border-radius:50%;width:34px;height:34px;display:grid;place-items:center}.menu{display:none}.page{display:none;padding:30px;max-width:1250px;margin:auto}.activePage{display:block}.hero{background:linear-gradient(120deg,#2563eb,#4f46e5);color:#fff;border-radius:20px;padding:30px;display:flex;justify-content:space-between;align-items:center}.eyebrow{font-size:11px;opacity:.8;font-weight:800;letter-spacing:1px}.hero h2{margin:8px 0;font-size:28px}.hero p{margin:0;opacity:.9}.primary{border:0;background:#2563eb;color:#fff;border-radius:9px;padding:11px 16px;font-weight:700;cursor:pointer}.hero .primary{background:#fff;color:#2563eb}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:20px 0}.stat,.card{background:#fff;border:1px solid #e8ebf2;border-radius:16px;padding:20px}.stat span{display:block;color:#8b94a7;font-size:12px}.stat strong{font-size:27px;display:block;margin-top:8px}.grid2{display:grid;grid-template-columns:1.35fr .65fr;gap:20px}.cardHead,.sectionHead{display:flex;justify-content:space-between;align-items:center}.card h3{margin-top:0}.cardHead button{border:0;background:none;color:#2563eb;cursor:pointer}.muted{color:#7b8497;line-height:1.6}.progressWrap{display:flex;gap:24px;align-items:center}.ring{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#2563eb 0deg,#2563eb 0deg,#e8edf5 0deg);position:relative}.ring:after{content:"";position:absolute;width:94px;height:94px;background:#fff;border-radius:50%}.ring span{position:relative;z-index:1;font-weight:800}.sectionHead{margin-bottom:20px}.sectionHead h2{margin-bottom:4px}.sectionHead p{color:#8b94a7;margin-top:0}.filters{display:flex;gap:8px;margin-bottom:16px}.filter{border:1px solid #dfe4ed;background:#fff;border-radius:20px;padding:8px 15px;cursor:pointer}.filter.active{background:#172033;color:#fff}.taskList,.list,.goals{display:grid;gap:12px}.task,.study,.goal{background:#fff;border:1px solid #e8ebf2;border-radius:14px;padding:17px;display:flex;justify-content:space-between;align-items:center;gap:15px}.task h3,.study h3,.goal h3{margin:0 0 5px}.task small,.study small,.goal small{color:#8b94a7}.actions{display:flex;gap:7px}.iconBtn{border:1px solid #e2e6ee;background:#fff;border-radius:8px;padding:7px 9px;cursor:pointer}.badge{font-size:11px;padding:5px 8px;border-radius:20px;background:#eef4ff;color:#2563eb}.high{background:#fff0f0;color:#c23b3b}.medium{background:#fff8e6;color:#a66a00}.low{background:#eefbf3;color:#287a49}.done{text-decoration:line-through;opacity:.55}.empty{text-align:center;padding:40px;color:#8b94a7;background:#fff;border:1px dashed #dfe4ed;border-radius:14px}.profileCard{display:flex;align-items:center;gap:18px;margin-bottom:18px}.bigAvatar{width:70px;height:70px;border-radius:50%;background:#dbeafe;color:#2563eb;display:grid;place-items:center;font-size:25px;font-weight:800}.formCard{display:grid;gap:14px;margin-bottom:18px}.formCard label,.modalBox label{font-size:12px;font-weight:700;color:#667085;display:grid;gap:6px}.formCard input,.modalBox input,.modalBox select{border:1px solid #dfe4ed;border-radius:8px;padding:11px;font:inherit}.notice{background:#f5f8ff;border-radius:10px;padding:12px;color:#52627a;font-size:12px}.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalBox{width:min(460px,100%);background:#fff;border-radius:16px;padding:25px;position:relative}.close{position:absolute;right:15px;top:13px;border:0;background:none;font-size:24px;cursor:pointer}.modalBox h2{margin-top:0}.modalForm{display:grid;gap:13px}.modalForm .primary{margin-top:4px}@media(max-width:800px){.sidebar{position:fixed;z-index:10;left:-260px;top:0;height:100%;transition:.2s}.sidebar.open{left:0}.menu{display:block;border:0;background:none;font-size:22px}.topbar{padding:15px 18px}.page{padding:20px 16px}.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.hero{padding:23px;display:block}.hero .primary{margin-top:18px}.hero h2{font-size:22px}.task,.study,.goal{align-items:flex-start;flex-direction:column}.actions{width:100%}.actions button{flex:1}}
+.authScreen {
+  min-height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f3f6fc;
+}
+
+.authCard {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.08);
+}
+
+.authLogo {
+  background: #2563eb;
+  color: white;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.authCard h1 { margin-bottom: 5px; }
+.authCard > p { color: #64748b; }
+
+.authTabs {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.authTab {
+  flex: 1;
+  padding: 12px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  background: #eef2f7;
+}
+
+.authTab.active {
+  background: #2563eb;
+  color: white;
+}
+
+.authCard label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.authCard input {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-top: 7px;
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+.authCard #authSubmit { width: 100%; }
+#authMessage { font-size: 13px; }
