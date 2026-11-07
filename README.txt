@@ -1,25 +1,15 @@
-TECH-SOLVE V2 — GLOBAL STUDENT PLATFORM
+# Tech-Solve V3
+Plan. Learn. Achieve.
 
-WHAT'S INCLUDED
-- Dashboard with task and progress summaries
-- Task manager with due dates, priority, complete/pending filters
-- Study planner with subject, topic, date and duration
+V3 introduces the account-ready foundation:
+- Dashboard
+- Tasks and deadlines
+- Study planner
 - Academic goals
-- About Tech-Solve page
-- Privacy & safety information
-- Responsive layout for phones, tablets and computers
+- Private student profile
+- Responsive mobile interface
+- Local data storage for the prototype
 
-HOW TO PUBLISH ON GITHUB PAGES
-1. Extract this ZIP on your computer.
-2. Open your existing Tech-Solve GitHub repository.
-3. Upload the contents of this folder (index.html, style.css, script.js, README.txt).
-4. Commit the changes to the main branch.
-5. GitHub Pages should redeploy automatically. Wait a few minutes and refresh your website.
+Important: authentication/cloud sync are not connected yet. The next step is connecting a secure backend such as Supabase.
 
-IMPORTANT
-This is a front-end prototype. Data is stored in the current browser on the current device.
-It does not include accounts, cloud syncing, server backups or secure multi-device storage.
-Do not enter sensitive personal information. A production service for children and teens
-needs appropriate privacy, security, consent and legal review before launch.
-
-To test locally, open index.html in a modern browser.
+For GitHub Pages, upload index.html, style.css and script.js to the repository root.

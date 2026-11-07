@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#2457e6">
-  <title>Tech-Solve | Plan. Learn. Achieve.</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech-Solve V3</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <a class="brand" href="#" data-view="dashboard"><span class="brand-mark">T</span><span>Tech-Solve<small>PLAN. LEARN. ACHIEVE.</small></span></a>
-      <div class="nav-label">WORKSPACE</div>
-      <nav>
-        <button class="nav-item active" data-view="dashboard">▦ <span>Dashboard</span></button>
-        <button class="nav-item" data-view="tasks">✓ <span>My tasks</span></button>
-        <button class="nav-item" data-view="planner">◷ <span>Study planner</span></button>
-        <button class="nav-item" data-view="goals">◎ <span>Academic goals</span></button>
-        <div class="nav-label secondary">DISCOVER</div>
-        <button class="nav-item" data-view="about">✦ <span>About Tech-Solve</span></button>
-        <button class="nav-item" data-view="privacy">♧ <span>Privacy & safety</span></button>
-      </nav>
-      <div class="sidebar-note"><b>Small steps. Big progress.</b><p>Build a study routine that works for you.</p></div>
-      <div class="profile"><div class="avatar">S</div><div><b>Student</b><small>Your learning space</small></div></div>
-    </aside>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">T</div><div><b>Tech-Solve</b><small>Plan. Learn. Achieve.</small></div></div>
+    <nav>
+      <button class="nav active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+      <button class="nav" data-page="tasks">✓ <span>Tasks</span></button>
+      <button class="nav" data-page="study">📚 <span>Study Planner</span></button>
+      <button class="nav" data-page="goals">🎯 <span>Goals</span></button>
+      <button class="nav" data-page="profile">👤 <span>Profile</span></button>
+    </nav>
+    <div class="side-note">V3 • Account-ready foundation</div>
+  </aside>
 
-    <main class="main">
-      <header class="topbar">
-        <div><div class="eyebrow">YOUR LEARNING SPACE</div><h1 id="page-title">Dashboard</h1></div>
-        <button class="primary" id="quick-add">＋ Add task</button>
-      </header>
-      <section id="content"></section>
-      <footer>© <span id="year"></span> Tech-Solve · Plan. Learn. Achieve.</footer>
-    </main>
-  </div>
+  <main class="main">
+    <header class="topbar">
+      <button id="menu" class="menu">☰</button>
+      <div class="welcome"><span id="greeting">Welcome back</span><h1 id="pageTitle">Dashboard</h1></div>
+      <button class="profileBtn" data-page="profile"><span id="avatar">S</span><span id="userName">Student</span></button>
+    </header>
 
-  <dialog id="task-dialog">
-    <form id="task-form" method="dialog">
-      <div class="dialog-head"><div><div class="eyebrow">STAY ORGANised</div><h2>Add a task</h2></div><button type="button" class="close" data-close>×</button></div>
-      <label>Subject<input name="subject" required maxlength="40" placeholder="e.g. Mathematics"></label>
-      <label>Task name<input name="title" required maxlength="90" placeholder="e.g. Revise algebra"></label>
-      <div class="two"><label>Due date<input name="date" type="date" required></label><label>Priority<select name="priority"><option>Medium</option><option>High</option><option>Low</option></select></label></div>
-      <button class="primary full" type="submit">Save task</button>
-    </form>
-  </dialog>
+    <section id="dashboard" class="page activePage">
+      <div class="hero">
+        <div><span class="eyebrow">YOUR ACADEMIC SPACE</span><h2>Stay organised. Keep learning.</h2><p>Manage schoolwork, study sessions and goals from one place.</p></div>
+        <button class="primary" onclick="openTask()">＋ Add task</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><span>Pending tasks</span><strong id="pendingCount">0</strong></div>
+        <div class="stat"><span>Completed</span><strong id="doneCount">0</strong></div>
+        <div class="stat"><span>Study sessions</span><strong id="studyCount">0</strong></div>
+        <div class="stat"><span>Goals</span><strong id="goalCount">0</strong></div>
+      </div>
+      <div class="grid2">
+        <div class="card"><div class="cardHead"><h3>Upcoming tasks</h3><button data-page="tasks">View all</button></div><div id="upcoming"></div></div>
+        <div class="card"><div class="cardHead"><h3>Progress</h3></div><div class="progressWrap"><div class="ring" id="ring"><span id="progress">0%</span></div><div><b>Keep going!</b><p class="muted">Complete your tasks to build your academic progress.</p></div></div></div>
+      </div>
+    </section>
 
-  <dialog id="study-dialog">
-    <form id="study-form" method="dialog">
-      <div class="dialog-head"><div><div class="eyebrow">MAKE TIME TO LEARN</div><h2>Plan a study session</h2></div><button type="button" class="close" data-close>×</button></div>
-      <label>Subject<input name="subject" required maxlength="40" placeholder="e.g. Biology"></label>
-      <label>What will you study?<input name="topic" required maxlength="90" placeholder="e.g. The human heart"></label>
-      <div class="two"><label>Date<input name="date" type="date" required></label><label>Duration<select name="duration"><option>25 minutes</option><option>30 minutes</option><option>45 minutes</option><option>60 minutes</option><option>90 minutes</option></select></label></div>
-      <button class="primary full" type="submit">Save session</button>
-    </form>
-  </dialog>
+    <section id="tasks" class="page">
+      <div class="sectionHead"><div><h2>My Tasks</h2><p>Keep every deadline in one place.</p></div><button class="primary" onclick="openTask()">＋ Add task</button></div>
+      <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="pending">Pending</button><button class="filter" data-filter="completed">Completed</button></div>
+      <div id="taskList" class="taskList"></div>
+    </section>
 
-  <dialog id="goal-dialog">
-    <form id="goal-form" method="dialog">
-      <div class="dialog-head"><div><div class="eyebrow">KEEP MOVING FORWARD</div><h2>Create an academic goal</h2></div><button type="button" class="close" data-close>×</button></div>
-      <label>Goal<input name="title" required maxlength="90" placeholder="e.g. Improve my science revision"></label>
-      <label>Target date<input name="date" type="date" required></label>
-      <button class="primary full" type="submit">Create goal</button>
-    </form>
-  </dialog>
-  <div id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
+    <section id="study" class="page">
+      <div class="sectionHead"><div><h2>Study Planner</h2><p>Plan focused study sessions.</p></div><button class="primary" onclick="openStudy()">＋ Add session</button></div>
+      <div id="studyList" class="list"></div>
+    </section>
+
+    <section id="goals" class="page">
+      <div class="sectionHead"><div><h2>Academic Goals</h2><p>Set goals and track your progress.</p></div><button class="primary" onclick="openGoal()">＋ Add goal</button></div>
+      <div id="goalList" class="goals"></div>
+    </section>
+
+    <section id="profile" class="page">
+      <div class="profileCard card">
+        <div class="bigAvatar" id="bigAvatar">S</div><div><h2 id="profileName">Student</h2><p class="muted">Private student profile</p></div>
+      </div>
+      <div class="card formCard"><h3>Profile settings</h3><label>Display name<input id="nameInput" maxlength="30" placeholder="Student"></label><button class="primary" onclick="saveProfile()">Save profile</button></div>
+      <div class="card"><h3>V3 account foundation</h3><p class="muted">This version prepares Tech-Solve for secure accounts and cloud synchronisation. Your current demo data remains stored locally until a backend is connected.</p><div class="notice">🔒 Don't enter passwords, phone numbers, home addresses or other sensitive information into this demo.</div></div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modalBox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
