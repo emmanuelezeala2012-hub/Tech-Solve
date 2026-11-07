@@ -24,3 +24,20 @@ function toggleTask(id){let t=data.tasks.find(x=>x.id===id);if(t)t.done=!t.done;
 function saveProfile(){let n=$('#nameInput').value.trim()||'Student';data.name=n;save();alert('Profile saved.')}function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 $$('.filter').forEach(b=>b.onclick=()=>{$$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()});
 render();
+   <section id="profile" class="page">
+      <div class="profileCard card">
+        <div class="bigAvatar" id="bigAvatar">S</div><div><h2 id="profileName">Student</h2><p class="muted">Private student profile</p></div>
+      </div>
+      <div class="card formCard"><h3>Profile settings</h3><label>Display name<input id="nameInput" maxlength="30" placeholder="Student"></label><button class="primary" onclick="saveProfile()">Save profile</button></div>
+      <div class="card"><h3>V3 account foundation</h3><p class="muted">This version prepares Tech-Solve for secure accounts and cloud synchronisation. Your current demo data remains stored locally until a backend is connected.</p><div class="notice">🔒 Don't enter passwords, phone numbers, home addresses or other sensitive information into this demo.</div></div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modalBox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div>
+</div>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</body>
+</html>
