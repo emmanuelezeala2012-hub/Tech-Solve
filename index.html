@@ -7,6 +7,40 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <section id="authScreen" class="authScreen">
+  <div class="authCard">
+    <div class="authLogo">T</div>
+    <h1>Welcome to Tech-Solve</h1>
+    <p>Plan. Learn. Achieve.</p>
+
+    <div class="authTabs">
+      <button id="loginTab" class="authTab active" type="button">Login</button>
+      <button id="signupTab" class="authTab" type="button">Sign up</button>
+    </div>
+
+    <form id="authForm">
+      <label id="nameLabel" hidden>
+        Display name
+        <input id="authName" type="text" maxlength="30" placeholder="Your name">
+      </label>
+
+      <label>
+        Email address
+        <input id="authEmail" type="email" required placeholder="student@example.com">
+      </label>
+
+      <label>
+        Password
+        <input id="authPassword" type="password" minlength="8" required placeholder="At least 8 characters">
+      </label>
+
+      <button id="authSubmit" class="primary" type="submit">Login</button>
+    </form>
+
+    <p id="authMessage" role="status"></p>
+    <small>Your academic information should remain private.</small>
+  </div>
+</section>
 <div class="app">
   <aside class="sidebar">
     <div class="brand"><div class="logo">T</div><div><b>Tech-Solve</b><small>Plan. Learn. Achieve.</small></div></div>
